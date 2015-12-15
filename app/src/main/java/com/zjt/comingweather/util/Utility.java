@@ -1,6 +1,7 @@
 package com.zjt.comingweather.util;
 
 import android.text.TextUtils;
+import android.util.Log;
 
 import com.zjt.comingweather.db.ComingWeatherDB;
 import com.zjt.comingweather.model.City;

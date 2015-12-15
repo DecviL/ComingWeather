@@ -52,8 +52,8 @@ public class ComingWeatherDB {
             do {
                 Province province = new Province();
                 province.setId(cursor.getInt(cursor.getColumnIndex("id")));
-                province.setProvinceCode(cursor.getString(cursor.getColumnIndex("province_name")));
-                province.setProvinceName(cursor.getString(cursor.getColumnIndex("province_code")));
+                province.setProvinceCode(cursor.getString(cursor.getColumnIndex("province_code")));
+                province.setProvinceName(cursor.getString(cursor.getColumnIndex("province_name")));
                 list.add(province);
             } while (cursor.moveToNext());
         }
