@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#484E61">
+
+        <TextView
+            android:id="@+id/tv_city_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="#fff"
+            android:textSize="24sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#27A5F9">
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_wendu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:id="@+id/layout_weather_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_weather_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_wendu_high"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="#fff"
+                    android:textSize="35sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="~"
+                    android:textColor="#fff"
+                    android:textSize="35sp" />
+
+                <TextView
+                    android:id="@+id/tv_wendu_low"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="#fff"
+                    android:textSize="35sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_type"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:textColor="#FFF"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_fengxiang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="#fff"
+                    android:textSize="35sp" />
+
+                <TextView
+                    android:id="@+id/tv_fengli"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="#fff"
+                    android:textSize="35sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_aqi"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:textColor="#FFF"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_ganmao"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:textColor="#FFF"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>
