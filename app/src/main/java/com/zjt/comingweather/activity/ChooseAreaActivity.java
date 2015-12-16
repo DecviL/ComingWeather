@@ -143,13 +143,11 @@ public class ChooseAreaActivity extends Activity {
         } else {
             address = "http://www.weather.com.cn/data/list3/city.xml";
         }
-        Log.d("response=", address);
         showProgressDialog();
         HttpUtil.sendHttpRequest(address, new HttpCallbackListener() {
             @Override
             public void onFinish(String response) {
                 boolean result = false;
-                Log.d("response=", response);
                 if ("province".equals(type)) {
                     result = Utility.handleProvincesResponse(comingWeatherDB, response);
                 } else if ("city".equals(type)) {
@@ -205,7 +203,6 @@ public class ChooseAreaActivity extends Activity {
 
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
         if (currentLevel == LEVEL_COUNTY) {
             queryCities();
         } else if (currentLevel == LEVEL_CITY) {

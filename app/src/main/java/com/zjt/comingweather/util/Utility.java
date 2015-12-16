@@ -60,8 +60,8 @@ public class Utility {
         if (!TextUtils.isEmpty(response)) {
             String[] allCounties = response.split(",");
             if (allCounties != null && allCounties.length > 0) {
-                for (String c : allCounties) {
-                    String[] array = c.split("\\|");
+                for (String a : allCounties) {
+                    String[] array = a.split("\\|");
                     County county = new County();
                     county.setCountyCode(array[0]);
                     county.setCountyName(array[1]);

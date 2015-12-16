@@ -4,6 +4,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 import com.zjt.comingweather.model.City;
 import com.zjt.comingweather.model.County;
@@ -36,6 +37,7 @@ public class ComingWeatherDB {
         return comingWeatherDB;
     }
 
+    //保存全国所有的省份
     public void saveProvince(Province province) {
         if (province != null) {
             ContentValues values = new ContentValues();
@@ -45,6 +47,7 @@ public class ComingWeatherDB {
         }
     }
 
+    //加载全国所有的省份
     public List<Province> loadProvinces() {
         List<Province> list = new ArrayList<Province>();
         Cursor cursor = db.query("Province", null, null, null, null, null, null);
@@ -91,8 +94,8 @@ public class ComingWeatherDB {
             ContentValues values = new ContentValues();
             values.put("county_name", county.getCountyName());
             values.put("county_code", county.getCountyCode());
-            values.put("city_id", county.getId());
-            db.insert("county", null, values);
+            values.put("city_id", county.getCityId());
+            db.insert("County", null, values);
         }
     }
 
